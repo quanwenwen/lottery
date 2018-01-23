@@ -106,7 +106,7 @@ export default {
         } else {
           num++;
         }
-    
+    $('.mui-popup-in').css('display','none')
         if (setp == 0) {
           clearTimeout(time);
           var text = $(".active").text();
