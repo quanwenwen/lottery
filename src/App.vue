@@ -72,7 +72,7 @@
         <div  class="mui-popup-text"></div>
       </div>
       <div class="mui-popup-buttons">
-        <span @click="qd" class="mui-popup-button mui-popup-button-bold">确定</span>
+        <span @click="confirm" class="mui-popup-button mui-popup-button-bold">确定</span>
       </div>
     </div>
   </div>
@@ -106,7 +106,7 @@ export default {
         } else {
           num++;
         }
-    $('.mui-popup-in').css('display','none')
+    $('.mui-popup-in').fadeOut();
         if (setp == 0) {
           clearTimeout(time);
           var text = $(".active").text();
@@ -114,13 +114,13 @@ export default {
           var text = $(".active").text();
         
         $('.mui-popup-text').html(text)
-        $('.mui-popup').css('display','block')
+        $('.mui-popup').delay("500").fadeIn();
         }
        
       }, 200);
     },
-    qd(){
-       $('.mui-popup-in').css('display','none')
+    confirm(){
+       $('.mui-popup-in').fadeOut();
     }
   }
 };
